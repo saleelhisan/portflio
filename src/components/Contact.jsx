@@ -34,6 +34,10 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if(form.name.length===0) return alert("Please enter your name")
+    if(form.email.length===0) return alert("Please enter your email id")
+    if(form.message.length===0) return alert("Please enter your message")
+
     setLoading(true);
 
     emailjs
